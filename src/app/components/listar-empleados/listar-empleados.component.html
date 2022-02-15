@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Cedula</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of emple; let indice=index">
+            <td>{{indice+1}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellidos}}</td>
+            <td>{{item.correoPersonal}}</td>
+            <td>{{item.cedula}}</td>
+        </tr>
+    </tbody>
+</table>
+
