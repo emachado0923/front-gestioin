@@ -6,7 +6,7 @@
   
     <mat-tab label="Demográficos" >
       
-      <form class="row g-3 mt-3" #empleadoForm="ngForm" (ngSubmit)="onSubmit()">
+      <form class="row g-3 mt-3" #empleadoForm="ngForm" (ngSubmit)="enviarDatos()">
         
         <div class="col-md-4">
           <label for="validationServer01" class="form-label">Nombres</label>
@@ -154,10 +154,10 @@
   
         <div class="col-md-4">
           <label for="validationServer03" class="form-label">Titulo Obtenido</label>
-          <input type="text" class="form-control is-invalid" name="tituloObtenido" #tituloObtenido="ngModel" [(ngModel)]="empleado.tituloObtenido" [ngModelOptions]="{standalone: true}" aria-describedby="validationServer03Feedback" required pattern="[a-zA-Z]+">
-          <small *ngIf="!tituloObtenido.valid && tituloObtenido.touched">
+          <input type="text" class="form-control is-invalid" name="tituloObtenido" #tituloObtenido="ngModel" [(ngModel)]="empleado.tituloObtenido" [ngModelOptions]="{standalone: true}" aria-describedby="validationServer03Feedback" required>
+          <!-- <small *ngIf="!tituloObtenido.valid && tituloObtenido.touched">
             <h3>Campo vacio</h3>
-          </small>
+          </small> -->
         </div>
   
         <div class="col-md-4">
@@ -168,9 +168,9 @@
         <div class="col-md-4">
           <label for="validationServer04" class="form-label">¿Tiene alguna condición especial?</label><br>
           <select class="form-select is-invalid" name="condicionEspecial" #condicionEspecial="ngModel" [(ngModel)]="empleado.condicionEspecial" [ngModelOptions]="{standalone: true}" aria-describedby="validationServer04Feedback" required>
-            <small *ngIf="!condicionEspecial.valid && condicionEspecial.touched">
+            <!-- <small *ngIf="!condicionEspecial.valid && condicionEspecial.touched">
             <h3>Campo vacio</h3>
-          </small>
+          </small> -->
             <option selected disabled value="">...</option>
             <option >Sí</option>
             <option>No</option>
@@ -182,7 +182,7 @@
           <input type="tel" class="form-control is-invalid" name="especifique" #especifique="ngModel" [(ngModel)]="empleado.especifique" [ngModelOptions]="{standalone: true}" aria-describedby="validationServer03Feedback">
         </div>
   
-        <div class="col-12">
+        <!-- <div class="col-12">
           <div class="form-check">
             <input class="form-check-input is-invalid" (click)="checked=!checked" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
             <label class="form-check-label" for="invalidCheck3">
@@ -191,7 +191,7 @@
           </div>
         </div>
   
-        <app-hijos *ngIf="checked"></app-hijos> 
+        <app-hijos *ngIf="checked"></app-hijos>  -->
   
        
   

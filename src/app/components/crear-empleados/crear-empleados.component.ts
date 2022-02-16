@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmpleadoService } from 'src/app/servicios/empleado.service';
 import {Router} from '@angular/router';
 import {Empleado} from '../../interfaces/empleado.interface';
+import {FormGroup,FormBuilder} from '@angular/forms'
 
 
 @Component({
@@ -16,7 +17,7 @@ export class CrearEmpleadosComponent implements OnInit {
 
   public empleado:any;
 
-  constructor(private empleadoService:EmpleadoService,private router:Router) {
+  constructor(private empleadoService:EmpleadoService,private router:Router,private formBuilder:FormBuilder) {
     this.empleado={
       nombres:'',
       apellidos:'',
@@ -51,13 +52,20 @@ export class CrearEmpleadosComponent implements OnInit {
   }
 
   onSubmit(){
-    this.empleadoService.crearEmpleado(this.empleado)
-    .subscribe(
-      res=>{
-        this.empleado=res;
-      },
-      err=>{console.log(err);
-      console.log(this.empleado);
-      });
+  //   this.empleadoService.crearEmpleado(this.empleado)
+  //   .subscribe(
+  //     res=>{
+  //       this.empleado=res;
+  //     },
+  //     err=>{console.log(err);
+  //     console.log(this.empleado);
+  //     });
+  // }
+  }
+
+  enviarDatos():any{
+    console.log(this.empleado);
+    this.empleadoService.crearEmpleado(this.empleado).subscribe();
+    
   }
 }
