@@ -1,0 +1,414 @@
+<div class="container">
+
+  <mat-tab-group class="mt-3" mat-align-tabs="start">
+
+    <!-- Demográficos-->
+  
+    <mat-tab label="Demográficos" >
+      
+      <form class="row g-3 mt-3" [formGroup]="formularioEmpleado"  (ngSubmit)="enviarEmpleado()">
+        
+        <div class="col-md-4">
+          <label class="form-label">Nombres</label>
+          <input type="text" class="form-control is-valid" name="nombres" formControlName="nombres" >
+          
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer02" class="form-label">Apellidos</label>
+          <input type="text" class="form-control is-valid" name="apellidos" formControlName="apellidos">
+          <!-- <small *ngIf="!apellidos.valid && apellidos.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServerUsername" class="form-label">Correo Electrónico</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+            <input type="email" class="form-control is-invalid" name="correoElectronico" formControlName="correoElectronico">
+            <!-- <small *ngIf="!correoElectronico.valid && correoElectronico.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Cédula</label>
+          <input type="number" class="form-control is-invalid" name="cedula"  formControlName="cedula" >
+          <!-- <small *ngIf="!cedula.valid && cedula.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+        
+        <div class="col-md-4">
+          <label for="validationServer04" class="form-label">Genero</label><br>
+          <select class="form-select is-invalid" name="genero" formControlName="genero">
+            <!-- <small *ngIf="!genero.valid && genero.touched">
+              <h3>Campo vacio</h3>
+            </small> -->
+            <option selected disabled value="">...</option>
+            <option>Hombre</option>
+            <option>Mujer</option>
+            <option>LGBT</option>
+          </select>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control is-invalid" name="fechaNacimiento" formControlName="fechaNacimiento">
+          <!-- <small *ngIf="!fechaNacimiento.valid && fechaNacimiento.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Lugar de Nacimiento</label>
+          <input type="text" class="form-control is-invalid" name="lugarNacimiento" formControlName="lugarNacimiento"  >
+          <!-- <small *ngIf="!lugarNacimiento.valid && lugarNacimiento.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Dirección</label>
+          <input type="text" class="form-control is-invalid" name="direccion" formControlName="direccion" >
+          <!-- <small *ngIf="!direccion.valid && direccion.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Municipio</label>
+          <input type="text" class="form-control is-invalid" name="municipio" formControlName="municipio">
+          <!-- <small *ngIf="!municipio.valid && municipio.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Barrio</label>
+          <input type="text" class="form-control is-invalid" name="barrio" formControlName="barrio">
+          <!-- <small *ngIf="!barrio.valid && barrio.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer05" class="form-label">Estrato Socioeconómico</label>
+          <input type="number" class="form-control is-invalid" name="estrato" formControlName="estrato">
+          <!-- <small *ngIf="!estrato.valid && estrato.touched">
+            <h3>Campo vacio</h3>
+          </small>-->
+        </div> 
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Teléfono</label>
+          <input type="number" class="form-control is-invalid" name="telefono" formControlName="telefono">
+          <!-- <small *ngIf="!telefono.valid && telefono.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer04" class="form-label">Tipo Vivienda</label><br>
+          <select class="form-select is-invalid" name="tipoVivienda" formControlName="tipoVivienda">
+            <!-- <small *ngIf="!tipoVivienda.valid && tipoVivienda.touched">
+              <h3>Campo vacio</h3>
+            </small> -->
+            <option selected disabled >...</option>
+            <option>Propia</option>
+            <option>Alquilada</option>
+            <option>Familiar</option>
+          </select>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer04" class="form-label">Estado Cívil</label><br>
+          <select class="form-select is-invalid" name="estadoCivil" formControlName="estadoCivil">
+            <!-- <small *ngIf="!estadoCivil.valid && estadoCivil.touched">
+              <h3>Campo vacio</h3>
+            </small> -->
+            <option selected disabled value="">...</option>
+            <option>Casado</option>
+            <option>Unión Libre</option>
+            <option>Soltero</option>
+            <option>Viudo</option>
+          </select>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer04" class="form-label">Nivel de Formación</label><br>
+          <select class="form-select is-invalid" name="nivelFormacion" formControlName="nivelFormacion">
+            <!-- <small *ngIf="!nivelFormacion.valid && nivelFormacion.touched">
+              <h3>Campo vacio</h3>
+            </small> -->
+            <option selected disabled value="">...</option>
+            <option>Técnico</option>
+            <option>Tecnológo</option>
+            <option>Profesional</option>
+          </select>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Titulo Obtenido</label>
+          <input type="text" class="form-control is-invalid" name="tituloObtenido" formControlName="tituloObtenido">
+          <!-- <small *ngIf="!tituloObtenido.valid && tituloObtenido.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Nombre de Cónyuge</label>
+          <input type="tel" class="form-control is-invalid" name="nombreConyuge" formControlName="nombreConyuge">
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer04" class="form-label">¿Tiene alguna condición especial?</label><br>
+          <select class="form-select is-invalid" name="condicionEspecial" formControlName="condicionEspecial" >
+            <!-- <small *ngIf="!condicionEspecial.valid && condicionEspecial.touched">
+            <h3>Campo vacio</h3>
+          </small> -->
+            <option selected disabled value="">...</option>
+            <option >Sí</option>
+            <option>No</option>
+          </select>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer03" class="form-label">Especifique Condición</label>
+          <input type="tel" class="form-control is-invalid" name="especifique" formControlName="especifique">
+        </div>
+  
+        <!-- <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input is-invalid" (click)="checked=!checked" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
+            <label class="form-check-label" for="invalidCheck3">
+              ¿Tiene Hijos?
+            </label>
+          </div>
+        </div>
+  
+        <app-hijos *ngIf="checked"></app-hijos>  -->
+  
+       
+  
+        <div class="col-12">
+          <button class="btn btn-primary mb-3" type="submit">Guardar</button>
+        </div>
+      </form>
+      
+    </mat-tab>
+  
+    <!-- Empleabilidad -->
+  
+    <mat-tab label="Empleabilidad">
+      
+      <form class="row g-3 mt-3">
+  
+        <div class="col-md-4">
+          <label for="validationServerUsername" class="form-label">Correo Institucionañ</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+            <input type="text" class="form-control is-invalid" id="correoInstitucional" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer01" class="form-label">EPS</label>
+          <input type="text" class="form-control is-valid" id="eps"  required>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationServer02" class="form-label">Fondo de Pensión</label>
+          <input type="text" class="form-control is-valid" id="fondoPension" required>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="validationServer03" class="form-label">Cesantías</label>
+          <input type="text" class="form-control is-invalid" id="cesantias" aria-describedby="validationServer03Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">ARL</label>
+          <input type="text" class="form-control is-invalid" id="arl" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Nivel de Riesgo</label>
+          <select class="form-select is-invalid" id="nivelRiesgo" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled value="">...</option>
+            <option>Alto</option>
+            <option>Medio</option>
+            <option>Bajo</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Objeto</label>
+          <input type="text" class="form-control is-invalid" id="objeto" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Valor Mensual</label>
+          <input type="text" class="form-control is-invalid" id="valorMensual" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Fecha de Inicio</label>
+          <input type="date" class="form-control is-invalid" id="fechaInicio" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Fecha de Terminación</label>
+          <input type="date" class="form-control is-invalid" id="fechaterminacion" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Valor Contrato</label>
+          <input type="number" class="form-control is-invalid" id="valorContrato" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">SIGEP</label>
+          <input type="text" class="form-control is-invalid" id="sigep" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Nombre del Supervisor</label>
+          <input type="text" class="form-control is-invalid" id="supervisor" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Carnet</label>
+          <input type="text" class="form-control is-invalid" id="carnet" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Número de Poliza</label>
+          <input type="number" class="form-control is-invalid" id="numeroPoliza" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer05" class="form-label">Nuevos</label>
+          <input type="text" class="form-control is-invalid" id="nuevos" aria-describedby="validationServer05Feedback" required>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Estado del Empleado</label>
+          <select class="form-select is-invalid" id="estadoEmpleado" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled value="">...</option>
+            <option>Activo</option>
+            <option>Inactivo</option>
+          </select>
+        </div>
+  
+        <div class="col-12">
+          <button class="btn btn-primary mb-3" type="submit">Guardar</button>
+        </div>
+  
+      </form>
+  
+    </mat-tab>
+  
+    <!-- Administrativas -->
+    
+    <mat-tab label="Administrativas">
+      
+      <form class="row g-3 mt-3">
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Licencias</label>
+          <select class="form-select is-invalid" id="licencias" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>No remuneradas</option>
+            <option>Remuneradas</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Permiso</label>
+          <select class="form-select is-invalid" id="permiso" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>Permisos remunerados</option>
+            <option>Permisos sindical</option>
+            <option>Permiso lactancia</option>
+            <option>Permiso académico compensando</option>
+            <option>Permiso para ejercer la docencia Universitaria</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Comisión</label>
+          <select class="form-select is-invalid" id="comision" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>De servivios</option>
+            <option>Para adelantar estudios</option>
+            <option>Para desempeñar un cargo de libre nombramiento y remoción o de periodo,
+              cuando el nombramiento recaiga en un empleado con derechos de carrera administrativa.</option>
+            <option>Para atender invitaciones de gobiernos extranjeros o de organismos internacionales 
+              (Art. 2.2.5.5.21 del Decreto 1083 de 2015 modificado por el 648 de 2017)</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Encargo</label>
+          <select class="form-select is-invalid" id="encargo" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option selected disabled >Encargo</option>
+            <option>Encargos en empleos de carrera</option>
+            <option>Encargos en empleos de libre nombramiento y remoción</option>
+            <option>Encargo interinstitucional</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Suspención del Ejercicio</label>
+          <select class="form-select is-invalid" id="suspensionEjercicio" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>Suspención en el ejercicio del cargo por decisión judicial o fiscal</option>
+            <option>Suspensión en el ejercicio del cargo por decisión disciplinaria</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Periodo de Prueba</label>
+          <select class="form-select is-invalid" id="periodoPrueba" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>Sí</option>
+            <option>No</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Vacaciones</label>
+          <select class="form-select is-invalid" id="vacaciones" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>Periodo</option>
+            <option>Tiempo</option>
+            <option>Interrumpidas (Acto Administrativo, periodo)</option>
+            <option>Reanudar (Acto Administrativo, periodo)</option>
+            <option>INCAPACIDADES</option>
+          </select>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationServer04" class="form-label">Otros</label>
+          <select class="form-select is-invalid" id="otros" aria-describedby="validationServer04Feedback" required>
+            <option selected disabled>...</option>
+            <option>PROCESOS DISCIPLINARIOS</option>
+            <option>EVALUACIÓN DEL DESEMPEÑO Y/O ACUERDOS DE GESTIÓN</option>
+            <option>BENEFICIOS RECIBIDOS PRESUPUESTO </option>
+          </select>
+        </div>
+  
+        <div class="col-12">
+          <button class="btn btn-primary mb-3" type="submit">Guardar</button>
+        </div>
+      </form>
+  
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+
